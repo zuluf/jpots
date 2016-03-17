@@ -2,8 +2,8 @@
 *.sublime-project
 node_modules
 *.log
-bin
-views
-routes
-public/javascripts/**/*
-public/stylesheets/**/*
+bin/
+views/
+routes/
+public/javascripts/
+public/stylesheets/
