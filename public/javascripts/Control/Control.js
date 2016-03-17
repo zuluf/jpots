@@ -4,7 +4,7 @@
 	/**
 	 * Check if jQuery available
 	 */
-	var $ = $ || (typeof jQuery !== "undefined" ? jQuery : undefined);
+	var $ = $ || (typeof jQuery !== "undefined" ? jQuery : undefined) ;
 	if (typeof $ === "undefined") {
 
 		if (typeof require === "function") {
