@@ -3,8 +3,10 @@ html
   head
     title= title
     link(rel='stylesheet', href='#{dist}index.css')
+    meta(rel='icon' type='image/x-icon' href='http://example.com/favicon.ico')
 
   body
     block content
 
+    script(src='#{dist}templates.js')
     script(src='#{dist}index.js')

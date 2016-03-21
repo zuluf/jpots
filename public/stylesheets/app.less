@@ -1,0 +1,144 @@
+/**
+ * Application styles
+ */
+
+html, body {
+	width: 100%;
+	height: 100%;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	background: @white;
+	font: inherit;
+	vertical-align: baseline;
+	position: relative;
+    overflow-x: hidden;
+	.font-smoothing(none);
+
+	* {
+		.box-sizing(border-box);
+		color: @dark;
+		font-family: @font-family;
+	}
+
+	header {
+		background: @darkgreen;
+		padding: 40px 10%;
+
+		h1 {
+			color: @white;
+			font-size: 1.7em;
+			padding: 5px;
+		}
+
+		h2 {
+			color: @white;
+			font-size: 1em;
+			padding: 5px;
+		}
+	}
+
+	#content {
+		padding: 10px 10%;
+		margin-bottom: 500px;
+
+		ul {
+			list-style: none;
+			display: inline-block;
+			margin: 10px 0;
+			width: 100%;
+
+			li {
+				display: inline-block;
+				width: 100%;
+				margin: 5px 0;
+
+				a {
+					padding: 3px 10px;
+					color: @dark;
+					text-decoration: underline;
+					color: @green;
+
+					&:focus {
+						color: @red;
+					}
+				}
+
+				span {
+					padding: 3px 10px;
+				}
+			}
+		}
+	}
+
+	button {
+		cursor: pointer;
+		font-size: 0.8em;
+		padding: 5px 20px;
+		background: @green;
+		color: @white;
+		border: 1px solid @dark;
+		margin: 0 5px 0 0;
+		.border-radius(5px);
+		&:focus {
+			background: @red;
+		}
+	}
+
+	.jpots-popup {
+		position: relative;
+		display: none;
+	    width: 90%;
+	    height: 90%;
+	    background: white;
+	    padding: 20px;
+	    border: 1px solid @dark;
+	    z-index: 123;
+
+	    span, button {
+	    	margin: 0 5px 0 0;
+	    }
+
+	    * {
+	    	&:focus {
+	    		border: 1px solid red;
+	    	}
+	    }
+
+	    h1 {
+	    	font-size: 1.7em;
+	    }
+	    p {
+	    	padding: 10px 0;
+	    }
+
+	    form {
+	    	display: inline-block;
+	    	width: 100%;
+	    	label {
+	    		display: inline-block;
+	    		width: 100%;
+	    		text-align: center;
+	    		margin: 10px 0;
+	    	}
+	    }
+
+	    .actions {
+	    	position: absolute;
+	    	bottom: 0;
+	    	right: 0;
+	    	padding: 10px 20px;
+	    }
+	}
+
+	.lunatic {
+		position: fixed;
+		z-index: 12321321213213123213;
+		background: @lunatic;
+		display: inline-block;
+		width: 100%;
+		padding: 10px 10%;
+		bottom: 0;
+	}
+}

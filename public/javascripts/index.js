@@ -3,4 +3,3 @@
 
 	new Layout('body');
 }());
-

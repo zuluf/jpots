@@ -1,0 +1,25 @@
+<div data-action="popup"
+	data-handler="popup-{{index}}"
+	class="jpots-popup"
+	style="width: {{width}}%; height:{{height}}%">
+
+	<h1>PopUp #{{index}} z-index: <span data-handler="z-index"></span></h1>
+
+	<p>
+		Test out tab index for the current popup window
+	</p>
+	<form>
+		<label>Tab Index <input placeholder="#1" /></label>
+		<label>Tab Index <input placeholder="#2" /></label>
+		<label>Tab Index <input placeholder="#3" /></label>
+		<label>Tab Index <input placeholder="#4" /></label>
+		<label>Tab Index <input placeholder="#5" /></label>
+	</form>
+
+	<span class="actions">
+		<button data-action="popup-append">append popup</button>
+		<button data-action="popup-prepend">prepend popup</button>
+		<button data-action="popup-close">close popup</button>
+		<button data-action="popup-close-all">close all popups</button>
+	</span>
+</div>

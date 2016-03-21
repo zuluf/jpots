@@ -1,1 +1,323 @@
-body{padding:50px;font:14px Lucida Grande,Helvetica,Arial,sans-serif}a{color:#00b7ff}
+/**
+ * Import styles
+ */
+/* rgb: 136, 186, 0 */
+/* rgb: 136, 186, 0 */
+/* 42 44 42 */
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+col-md-,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+html {
+  -webkit-overflow-scrolling: touch;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+@media screen and (max-device-width: 480px) {
+  html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+}
+/**
+ * Responsive layouts
+ */
+@media (min-width: 34em) {
+  header {
+    padding: 40px 20px!important;
+  }
+  #content,
+  .lunatic {
+    padding: 10px 20px!important;
+  }
+}
+@media (min-width: 48em) {
+  header {
+    padding: 40px 50px!important;
+  }
+  #content,
+  .lunatic {
+    padding: 10px 50px!important;
+  }
+}
+/**
+ * Application styles
+ */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: #FFFFFF;
+  font: inherit;
+  vertical-align: baseline;
+  position: relative;
+  overflow-x: hidden;
+  -webkit-font-smoothing: none;
+  -moz-font-smoothing: none;
+  -ms-font-smoothing: none;
+  -o-font-smoothing: none;
+  font-smoothing: none;
+}
+html *,
+body * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #3B463B;
+  font-family: "Helvetica", "Calibri", Arial, sans-serif;
+}
+html header,
+body header {
+  background: #253C25;
+  padding: 40px 10%;
+}
+html header h1,
+body header h1 {
+  color: #FFFFFF;
+  font-size: 1.7em;
+  padding: 5px;
+}
+html header h2,
+body header h2 {
+  color: #FFFFFF;
+  font-size: 1em;
+  padding: 5px;
+}
+html #content,
+body #content {
+  padding: 10px 10%;
+  margin-bottom: 500px;
+}
+html #content ul,
+body #content ul {
+  list-style: none;
+  display: inline-block;
+  margin: 10px 0;
+  width: 100%;
+}
+html #content ul li,
+body #content ul li {
+  display: inline-block;
+  width: 100%;
+  margin: 5px 0;
+}
+html #content ul li a,
+body #content ul li a {
+  padding: 3px 10px;
+  color: #3B463B;
+  text-decoration: underline;
+  color: #5D945D;
+}
+html #content ul li a:focus,
+body #content ul li a:focus {
+  color: #D43F3F;
+}
+html #content ul li span,
+body #content ul li span {
+  padding: 3px 10px;
+}
+html button,
+body button {
+  cursor: pointer;
+  font-size: 0.8em;
+  padding: 5px 20px;
+  background: #5D945D;
+  color: #FFFFFF;
+  border: 1px solid #3B463B;
+  margin: 0 5px 0 0;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+html button:focus,
+body button:focus {
+  background: #D43F3F;
+}
+html .jpots-popup,
+body .jpots-popup {
+  position: relative;
+  display: none;
+  width: 90%;
+  height: 90%;
+  background: white;
+  padding: 20px;
+  border: 1px solid #3B463B;
+  z-index: 123;
+}
+html .jpots-popup span,
+body .jpots-popup span,
+html .jpots-popup button,
+body .jpots-popup button {
+  margin: 0 5px 0 0;
+}
+html .jpots-popup *:focus,
+body .jpots-popup *:focus {
+  border: 1px solid red;
+}
+html .jpots-popup h1,
+body .jpots-popup h1 {
+  font-size: 1.7em;
+}
+html .jpots-popup p,
+body .jpots-popup p {
+  padding: 10px 0;
+}
+html .jpots-popup form,
+body .jpots-popup form {
+  display: inline-block;
+  width: 100%;
+}
+html .jpots-popup form label,
+body .jpots-popup form label {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+}
+html .jpots-popup .actions,
+body .jpots-popup .actions {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding: 10px 20px;
+}
+html .lunatic,
+body .lunatic {
+  position: fixed;
+  z-index: 12321321213213123213;
+  background: #97d300;
+  display: inline-block;
+  width: 100%;
+  padding: 10px 10%;
+  bottom: 0;
+}

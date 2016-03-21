@@ -1,0 +1,124 @@
+/**
+ * background-size css browser prefix
+ *
+ * @param (size) valid css background size value (width | height | auto | contain | cover)
+ */
+.background-size (@size) {
+	-webkit-background-size: @size;
+	   -moz-background-size: @size;
+	    -ms-background-size: @size;
+	     -o-background-size: @size;
+	        background-size: @size;
+}
+
+/**
+ * box-sizing css browser prefix
+ *
+ * @param (size) valid css box sizing value (border-box | content-box | inherit)s
+ */
+.box-sizing (@size) {
+	-webkit-box-sizing: @size;
+	   -moz-box-sizing: @size;
+	    -ms-box-sizing: @size;
+	     -o-box-sizing: @size;
+	        box-sizing: @size;
+}
+
+/**
+ * border-radius css browser prefix
+ *
+ * @param (radius) valid css border radius values (top-left | top-right | bottom-right | bottom-left)
+ */
+.border-radius(@radius) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+      -ms-border-radius: @radius;
+       -o-border-radius: @radius;
+          border-radius: @radius;
+}
+
+/**
+ * box-shadow css browser prefix
+ *
+ * @param (shadow) valid css box shadow values (offset-x | offset-y | blur-radius | spread-radius | color)
+ */
+.box-shadow (@shadow) {
+	-webkit-box-shadow: @shadow;
+	   -moz-box-shadow: @shadow;
+	    -ms-box-shadow: @shadow;
+	     -o-box-shadow: @shadow;
+	        box-shadow: @shadow;
+}
+
+/**
+ * transition css browser prefix
+ *
+ * @param (transition) valid css transition values (property name | duration | timing function | delay)
+ */
+.transition (@transition) {
+	-webkit-transition: @transition;
+	   -moz-transition: @transition;
+	    -ms-transition: @transition;
+	     -o-transition: @transition;
+	        transition: @transition;
+}
+
+/**
+ * transform css browser prefix
+ *
+ * @param (transform) valid css transform values (none | inherit | initial | unset | multiple function values(matrix, translate, scale, ...))
+ */
+.transform (@transform) {
+	-webkit-transform: @transform;
+	   -moz-transform: @transform;
+	    -ms-transform: @transform;
+	     -o-transform: @transform;
+	        transform: @transform;
+}
+
+/**
+ * opacity css browser prefix
+ *
+ * @param (opacity) valid css opacity float value; Function will transform opacity to percentage for ms fuckers
+ */
+.transparent (@opacity) {
+	@percent: percentage(@opacity);
+
+	-khtml-opacity: @opacity;
+	  -moz-opacity: @opacity;
+		-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=@{percent})";
+		   opacity: @opacity;
+			filter: @percent;
+}
+
+/**
+ * font-smoothing
+ *
+ * @param (opacity) valid css opacity float value; Function will transform opacity to percentage for ms fuckers
+ */
+.font-smoothing (@smoothing) {
+	-webkit-font-smoothing: @smoothing;
+	   -moz-font-smoothing: @smoothing;
+	    -ms-font-smoothing: @smoothing;
+	     -o-font-smoothing: @smoothing;
+			font-smoothing: @smoothing;
+}
+
+/**
+ * truncate element content
+ */
+.truncate {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/**
+ * apples and oranges
+ */
+.apples (@property, @expression) {
+	@{property}: -webkit-calc(@expression);
+	@{property}:    -moz-calc(@expression);
+	@{property}:     -ms-calc(@expression);
+	@{property}:     	 calc(@expression);
+}
