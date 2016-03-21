@@ -10,6 +10,7 @@
 	 */
 	fs = require('fs');
 	gulp = require('gulp');
+	jtpl = require('gulp-js-templates');
 	concat = require('gulp-concat');
 	uglify = require('gulp-uglify');
 	cssnano = require('gulp-cssnano');
@@ -51,7 +52,8 @@
 	gulp.task('less', function() {
 		return gulp.src('./public/stylesheets/index.less')
 			.pipe(concat('index.css'))
-			.pipe(cssnano())
+			.pipe(less())
+			//.pipe(cssnano())
 			.pipe(gulp.dest('./public/dist'));
 	});
 
@@ -62,7 +64,7 @@
 		return gulp.src('./views/index.jade')
 			.pipe(jade({
 				locals: {
-					dist: '/public/dist/',
+					dist: 'public/dist/',
 					title: 'jpo test suite'
 				}
 			}))
@@ -71,11 +73,23 @@
 	});
 
 	/**
+	 * Gulp jtpl task for building application mustache
+	 */
+	gulp.task('jtpl', function() {
+		return gulp.src('./public/javascripts/**/*.hbs')
+			.pipe(jtpl('templates.js', {
+				varName : 'jpotsTemplates'
+			}))
+			.pipe(gulp.dest('./public/dist'));
+	});
+
+	/**
 	 * Gulp live reload task
 	 */
 	gulp.task('live', function() {
 		gulp.watch('./public/stylesheets/**/*.less', ['less']);
 		gulp.watch(['./public/javascripts/**/*.js'], ['browserify']);
+		gulp.watch(['./public/javascripts/**/*.hbs'], ['jtpl']);
 	});
 
 	/**
