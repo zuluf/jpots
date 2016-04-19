@@ -1,12 +1,19 @@
 doctype html
 html
-  head
-    title= title
-    link(rel='stylesheet', href='#{dist}index.css')
-    meta(rel='icon' type='image/x-icon' href='http://example.com/favicon.ico')
+	head
+		title= title
+		link(rel='stylesheet', href='#{dist}index.css')
+		meta(rel='icon' type='image/x-icon' href='http://example.com/favicon.ico')
+		meta(name='description' content='dynamic-document-meta - How to set dynamic Meta Tags and Open Graph')
+		meta(name='twitter:card' content='summary')
+		meta(name='twitter:domain' content='stackoverflow.com')
+		meta(property='og:type' content='website')
+		meta(property='og:description' content='dynamic-document-meta - How to set dynamic Meta Tags and Open Graph')
+		meta(name='twitter:title' property='og:title' itemprop='title name' content='How to set dynamic Meta Tags and Open Graph?')
+		meta(property='og:url' content='http://zuluf.github.io/jpots/')
 
-  body
-    block content
+	body
+		block content
 
-    script(src='#{dist}templates.js')
-    script(src='#{dist}index.js')
+		script(src='#{dist}templates.js')
+		script(src='#{dist}index.js')
